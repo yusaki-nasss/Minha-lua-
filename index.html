@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang='pt-BR'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>Nosso Pequeno Universo ❤️</title>
+<style>
+body{margin:0;font-family:Arial;background:#000;color:#fff;overflow-x:hidden}
+video{position:fixed;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:-1}
+section{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:30px;text-align:center}
+img{width:280px;max-width:90%;border-radius:18px;margin:10px;box-shadow:0 0 20px #fff4}
+button{padding:14px 28px;border:0;border-radius:30px;background:#ff4d9a;color:#fff;font-size:18px}
+#intro{position:fixed;inset:0;background:#000;display:flex;flex-direction:column;justify-content:center;align-items:center}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;max-width:900px;width:100%}
+.grid div{background:#ffffff18;padding:10px;border-radius:12px}
+</style></head><body>
+<video autoplay muted loop playsinline><source src="video.mp4" type="video/mp4"></video><div class="ov"></div>
+<div id="intro"><h1>❤️ Nosso Pequeno Universo ❤️</h1><p>Existe uma pessoa muito especial...</p><button onclick="entrar()">Entrar</button></div>
+<audio id="m" loop><source src="musica.mp3" type="audio/mpeg"></audio>
+<section><h1>Para Minha Pretinha ❤️</h1><p>Este pequeno universo foi feito para você. Obrigado por iluminar meus dias. Eu te amo mais do que as palavras conseguem explicar.</p></section>
+<section><h2>Nossas lembranças</h2><img src="foto1.jpg"><img src="foto2.jpg"></section>
+<section><h2>Eu te amo em várias línguas</h2><div class="grid">
+<div>🇧🇷 Eu te amo</div><div>🇺🇸 I love you</div><div>🇪🇸 Te amo</div><div>🇫🇷 Je t'aime</div><div>🇮🇹 Ti amo</div><div>🇩🇪 Ich liebe dich</div><div>🇵🇹 Amo-te</div><div>🇯🇵 愛してる</div><div>🇰🇷 사랑해</div><div>🇨🇳 我爱你</div></div></section>
+<section><h1>❤️</h1><p>Se algum dia você esquecer o quanto é especial, volte aqui. Enquanto este pequeno universo existir, meu amor por você estará guardado nele. Eu te amo. ❤️</p></section>
+<script>
+function entrar(){document.getElementById('intro').style.display='none';document.getElementById('m').play().catch(()=>{});}
+for(let i=0;i<120;i++){let s=document.createElement('div');s.style.cssText=`position:fixed;left:${Math.random()*100}vw;top:${Math.random()*100}vh;width:2px;height:2px;background:white;border-radius:50%;opacity:${Math.random()};pointer-events:none`;document.body.appendChild(s);}
+setInterval(()=>{let p=document.createElement('div');p.textContent='🌸';p.style.cssText=`position:fixed;left:${Math.random()*100}vw;top:-30px;font-size:${20+Math.random()*20}px;transition:8s linear;`;document.body.appendChild(p);requestAnimationFrame(()=>{p.style.transform='translateY(120vh) rotate(720deg)';p.style.opacity='0';});setTimeout(()=>p.remove(),8000)},500);
+</script></body></html>
